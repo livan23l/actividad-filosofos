@@ -10,10 +10,10 @@ import os
 import time
 import random
 
-PHILOSOPHERS = 5
-MAX_FOOD = 6
-FIRST_TIME_SLEEP = 1
-TIME_SLEEP = 0.5
+PHILOSOPHERS = 5  # The amount of philosophers (set between 4 and 9)
+MAX_FOOD = 6  # The maximum foods of each philosopher (set between 1 and 9)
+FIRST_TIME_SLEEP = 1  # The duration of the first iteration (in seconds)
+TIME_SLEEP = 3  # The duration of the rest of iterations (in seconds)
 
 class Draw:
     _colors = {
@@ -226,6 +226,7 @@ class Simulation:
         print("\n\nHistorial:")
         for play in self._plays:
             print(f"- {play}")
+
 
 def main():
     Simulation()
